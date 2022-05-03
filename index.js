@@ -148,6 +148,7 @@ function showResult(){
         scoreText.innerHTML = scoreTag;
     }
 }
+
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){
@@ -190,4 +191,72 @@ function queCounter(index){
     //creating a new span tag and passing the question number and total question
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
+}
+function loadScores() {
+
+  var savedScores = localStorage.getItem("highscore");
+  
+  // if there are no tasks, set tasks to an empty array and return out of the function
+  if (!savedScores) {
+      return false;
+  }
+  console.log("Saved scores found!");
+  // else, load up saved scores
+
+  // parse string into object
+  savedScores = JSON.parse(savedScores);
+  console.log(savedScores.initials);
+  console.log(savedScores.score);
+
+  for (var i = 0; i < savedScores.length; i++) {
+      console.log(savedScores[i].initials + ": " + savedScores[i].score);
+      var scoreContainerEl = document.createElement("div");
+      scoreContainerEl.className = "score";
+      var newHighScore = document.createElement("p");
+      newHighScore.textContent = savedScores[i].initials + ": " + savedScores[i].score;
+      scoreContainerEl.appendChild(newHighScore);
+      highScoreEl.appendChild(scoreContainerEl);
+  }
+
+}
+
+function clearStorageHandler () {
+  localStorage.clear();
+  highScoreEl.style.display = "none";
+}
+
+loadScores();
+// clearScoresBtn.addEventListener('click', clearStorageHandler);
+
+var submitHighScore =  function (event) {
+
+  event.preventDefault();
+
+  var initialsInput = document.querySelector("input[name='initials']").value;
+
+  if (!initialsInput) {
+      alert("Please enter your initials");
+      return;
+  }
+
+  var prevScores = localStorage.getItem("highscore");
+  var newScores;
+
+  if (!prevScores) {
+      newScores = [];
+  } else {
+      newScores = JSON.parse(prevScores);
+  }
+
+  var scoreObj = {
+      initials: initialsInput,
+      score: timeLeft
+  };
+
+  newScores.push(scoreObj);
+
+  newScores = JSON.stringify(newScores);
+  localStorage.setItem("highscore",newScores);
+
+  resultsText.textContent = "Submitted score of " + timeLeft + " for " + initialsInput;
 }

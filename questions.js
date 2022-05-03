@@ -2,13 +2,13 @@
 let questions = [
     {
     numb: 1,
-    question: "What does HTML stand for?",
+    question: "Inside which HTML element do we put the JavaScript?",
     answer: "Hyper Text Markup Language",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "<scripting>",
+      "<js>",
+      "<javascript>",
+      "<script>"
     ]
   },
     {
@@ -55,8 +55,7 @@ let questions = [
       "eXamine Multiple Language"
     ]
   },
-  // you can uncomment the below codes and make duplicate as more as you want to add question
-  // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
+  
   //   {
   //   numb: 6,
   //   question: "Your Question is Here",
