@@ -75,17 +75,29 @@
             <div class="previousScores">
                 
             </div>
-            <form id="highscore">
+            <form id="initals">
                 <label for="initals">initals</label><br>
                 <input type="text" id="initals" name="initals"><br><br>
-                <input type="submit" value="Submit">
+                <!-- <input type="submit" value="Submit"> -->
+              </form> 
+              <form id="highscore">
+                <label for="highscore">highscore</label><br>
+                <input type="text" id="highscore" name="highscore"><br><br>
+                <!-- <input type="submit" value="Submit"> -->
               </form> 
         </div>
         <div class="buttons">
+            <button id="initals" class="highscore">Record initials & HS</button>
             <button class="restart">Replay Quiz</button>
             <button class="quit">Quit Quiz</button>
         </div>
     </div>
+    <script>
+        const element = document.getElementById("SubmitHighScore");
+        element.addEventListener("click", function() {
+          document.getElementById("SubmitHighScore").innerHTML = "Nice Score!";
+        });
+        </script>
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
     <script src="questions.js"></script>
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
