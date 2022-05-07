@@ -227,11 +227,12 @@ function clearStorageHandler () {
 loadScores();
 // clearScoresBtn.addEventListener('click', clearStorageHandler);
 
-var submitHighScore =  function (event) {
+function submitHighScore(event) {
 
   event.preventDefault();
-
-  var initialsInput = document.querySelector("input[name='initials']").value;
+function submitInitials ();
+  var initialsInput = document.querySelector("#initials")
+  console.log(initialsInput)
 
   if (!initialsInput) {
       alert("Please enter your initials");
