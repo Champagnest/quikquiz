@@ -332,3 +332,11 @@ footer button.show{
   color: #fff;
   background: #007bff;
 }
+.buttons button.highscore{
+  color: #007bff;
+  background: #fff;
+}
+.buttons button.highscore:hover{
+  color: #fff;
+  background: #007bff;
+}

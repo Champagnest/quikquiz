@@ -3,61 +3,59 @@ let questions = [
     {
     numb: 1,
     question: "Inside which HTML element do we put the JavaScript?",
-    answer: "Hyper Text Markup Language",
+    answer: "<script>",
     options: [
-      "<scripting>",
-      "<js>",
-      "<javascript>",
-      "<script>"
+      "scripting",
+      "js",
+      "javascript",
+      "script"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "Where is the correct place to insert a JavaScript?",
+    answer: "both",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "both",
+      "The head section",
+      "The body section",
+      "none"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "The external JavaScript file must contain the <script> tag.",
+    answer: "false",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "true",
+      "false"
     ]
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "How to write an IF statement in JavaScript?",
+    answer: "if (i==5)",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "if (i==5)",
+      "if i =5 then",
+      "if i = 5",
+      "if i == 5 then"
     ]
   },
     {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "How does a FOR loop start?",
+    answer: "for (i = 0; i <= 5; i++)",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "for (i = 0; i <= 5",
+      "for (i <= 5; i++)",
+      "for i = 1 to 5",
+      "for (i = 0; i <= 5; i++)"
     ]
   },
   
   //   {
-  //   numb: 6,
+  //   numb: ,
   //   question: "Your Question is Here",
   //   answer: "Correct answer of the question is here",
   //   options: [
